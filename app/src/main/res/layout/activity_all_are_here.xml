@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".all_are_here">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="30dp">
+
+
+        <Switch
+            android:id="@+id/switchSeasons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show Six Seasons of Bangladesh"
+            android:textSize="23sp"
+            android:textColor="#1B6075"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp" />
+
+
+        <TextView
+            android:id="@+id/seasonsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The Six Seasons of Bangladesh:\n1.Summer\n2.Rainy \n3. Autumn \n4. Late Autumn \n5.Winter \n6.Spring"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:textColor="#000000"
+            android:layout_marginBottom="20dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select your favourite tourist places:"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="#000000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/p1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="Tanguwar Haor"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <CheckBox
+                android:id="@+id/p2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="Sundarbans"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <CheckBox
+                android:id="@+id/p3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="Sajek Valley"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <CheckBox
+                android:id="@+id/p4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Paharpur"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select your City:"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="Dhaka"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="Sylhet"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="Barishal"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Other's City"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Adjust Value"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                android:textColor="#13ABBF" />
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100" />
+
+            <TextView
+                android:id="@+id/seekValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:text="Progress: 0"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginVertical="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rate Last Visiting Place"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:textColor="#13ABBF" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:stepSize="0.5"
+                android:progressTint="@color/fire_brick_500"
+                android:progressBackgroundTint="@color/fire_brick_200" />
+
+            <TextView
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="35dp"
+                android:text="Rating: 0.0"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
